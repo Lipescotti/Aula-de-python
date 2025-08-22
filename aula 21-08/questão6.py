@@ -28,24 +28,37 @@ elif operacao == 3:
     imagem = " x "
 
 elif operacao == 4:
-    resultado = n1 / n2
-    imagem = " / "
+    if n2 != 0:
+        resultado = n1 / n2
+        imagem = " / "
+    else:
+        operacao = -1
+
 
 elif operacao == 5:
-    resultado = n1 // n2
-    imagem = " // "
+    if n2 != 0 :
+        resultado = n1 // n2
+        imagem = " // "
+    else:
+        operacao = -1
 
 elif operacao == 6:
-    resultado = n1 % n2
-    imagem = " % "
-
+    if n2 != 0:
+        resultado = n1 % n2
+        imagem = " % "
+    else:
+        operacao = -1
+    
 elif operacao == 7:
     resultado = n1**n2
     imagem = "^"
 
 else :
     operacao == 0
-    print("\n\nCalculo cancelado")
+    print("\n\nCalculo cancelado\n\n")
 
-if operacao != 0:
-    print("\n\nO resultado de:\n", n1, imagem, n2, " = ", resultado)
+if operacao > 0:
+    print("\n\nO resultado de:\n", n1, imagem, n2, " = ", resultado, '\n\n')
+
+elif operacao == -1:
+    print("\n\nOperação cancelada devido a erro gerado por divisão por 0\n\n")
