@@ -1,13 +1,17 @@
-print("|||Calculo da soma de uma PA|||")
+# Sequencia de fibonate {1, 1, 2, 3, 5, 8, 13, 21 ...}
 
-print("\n\nValor inicial = 1\nRasão = 1\nValor final = 10\n")
+tamanho = 0
+while tamanho <= 0:
+    tamanho = int(input("Escreva quantos numeros quer na sequencia: "))
+    if tamanho <= 0:
+        print("Tamanho invalido\n\n")
 
-soma = 0
-i = 1
+        
+anterior = 0
+proximo = 1
 
-while i <= 10:
-    soma = soma + i
-    print(f"Soma da PA quando n é {i} = {soma}")
-    i = i + 1
-
-print(f"\n\nA soma total da PA quando Sn de 10 = {soma}")
+for n in range(tamanho):
+    atual = proximo
+    print(f"{proximo} ")
+    proximo = anterior + atual
+    anterior = atual

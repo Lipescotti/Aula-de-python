@@ -1,17 +1,15 @@
-# Sequencia de fibonate {1, 1, 2, 3, 5, 8, 13, 21 ...}
+#Fatorial 
 
-tamanho = 0
-while tamanho <= 0:
-    tamanho = int(input("Escreva quantos numeros quer na sequencia: "))
-    if tamanho <= 0:
-        print("Tamanho invalido\n\n")
+n = -1
+while n < 0:
+    n = int(input("Escreva um numero (inteiro e > 0) para ser fatorado: "))
+    if n < 0:
+        print("\nNúmero invalido\n\n")
 
-        
-anterior = 0
-proximo = 1
 
-for n in range(tamanho):
-    atual = proximo
-    print(f"{proximo} ")
-    proximo = anterior + atual
-    anterior = atual
+fatorial = 1
+for i in range(n, 0, -1): 
+    print(fatorial, "*", i, " = ", fatorial * i)
+    fatorial = fatorial * i
+
+print(f"\n\nO fatorial de {n} = {fatorial}")
